@@ -148,9 +148,9 @@ pub fn logical_output(output: &Output) -> niri_ipc::LogicalOutput {
     let size = output_size(output);
     let transform = match output.current_transform() {
         Transform::Normal => niri_ipc::Transform::Normal,
-        Transform::_90 => niri_ipc::Transform::_90,
-        Transform::_180 => niri_ipc::Transform::_180,
-        Transform::_270 => niri_ipc::Transform::_270,
+        Transform::Normal90 => niri_ipc::Transform::Normal90,
+        Transform::Normal180 => niri_ipc::Transform::Normal180,
+        Transform::Normal270 => niri_ipc::Transform::Normal270,
         Transform::Flipped => niri_ipc::Transform::Flipped,
         Transform::Flipped90 => niri_ipc::Transform::Flipped90,
         Transform::Flipped180 => niri_ipc::Transform::Flipped180,
@@ -169,9 +169,9 @@ pub fn logical_output(output: &Output) -> niri_ipc::LogicalOutput {
 pub fn ipc_transform_to_smithay(transform: niri_ipc::Transform) -> Transform {
     match transform {
         niri_ipc::Transform::Normal => Transform::Normal,
-        niri_ipc::Transform::_90 => Transform::_90,
-        niri_ipc::Transform::_180 => Transform::_180,
-        niri_ipc::Transform::_270 => Transform::_270,
+        niri_ipc::Transform::Normal90 => Transform::Normal90,
+        niri_ipc::Transform::Normal180 => Transform::Normal180,
+        niri_ipc::Transform::Normal270 => Transform::Normal270,
         niri_ipc::Transform::Flipped => Transform::Flipped,
         niri_ipc::Transform::Flipped90 => Transform::Flipped90,
         niri_ipc::Transform::Flipped180 => Transform::Flipped180,

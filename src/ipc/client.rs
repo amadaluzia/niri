@@ -466,9 +466,9 @@ fn print_output(output: Output) -> anyhow::Result<()> {
 
         let transform = match transform {
             Transform::Normal => "normal",
-            Transform::_90 => "90° counter-clockwise",
-            Transform::_180 => "180°",
-            Transform::_270 => "270° counter-clockwise",
+            Transform::Normal90 => "90° counter-clockwise",
+            Transform::Normal180 => "180°",
+            Transform::Normal270 => "270° counter-clockwise",
             Transform::Flipped => "flipped horizontally",
             Transform::Flipped90 => "90° counter-clockwise, flipped horizontally",
             Transform::Flipped180 => "flipped vertically",

@@ -903,13 +903,13 @@ pub enum Transform {
     Normal,
     /// Rotated by 90°.
     #[serde(rename = "90")]
-    _90,
+    Normal90,
     /// Rotated by 180°.
     #[serde(rename = "180")]
-    _180,
+    Normal180,
     /// Rotated by 270°.
     #[serde(rename = "270")]
-    _270,
+    Normal270,
     /// Flipped horizontally.
     Flipped,
     /// Rotated by 90° and flipped horizontally.

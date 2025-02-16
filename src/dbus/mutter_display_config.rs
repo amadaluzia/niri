@@ -136,9 +136,9 @@ impl DisplayConfig {
             if let Some(logical) = output.logical.as_ref() {
                 let transform = match logical.transform {
                     niri_ipc::Transform::Normal => 0,
-                    niri_ipc::Transform::_90 => 1,
-                    niri_ipc::Transform::_180 => 2,
-                    niri_ipc::Transform::_270 => 3,
+                    niri_ipc::Transform::Normal90 => 1,
+                    niri_ipc::Transform::Normal180 => 2,
+                    niri_ipc::Transform::Normal270 => 3,
                     niri_ipc::Transform::Flipped => 4,
                     niri_ipc::Transform::Flipped90 => 5,
                     niri_ipc::Transform::Flipped180 => 6,
@@ -201,9 +201,9 @@ impl DisplayConfig {
                         scale: Some(niri_config::FloatOrInt(requested_config.scale)),
                         transform: match requested_config.transform {
                             0 => niri_ipc::Transform::Normal,
-                            1 => niri_ipc::Transform::_90,
-                            2 => niri_ipc::Transform::_180,
-                            3 => niri_ipc::Transform::_270,
+                            1 => niri_ipc::Transform::Normal90,
+                            2 => niri_ipc::Transform::Normal180,
+                            3 => niri_ipc::Transform::Normal270,
                             4 => niri_ipc::Transform::Flipped,
                             5 => niri_ipc::Transform::Flipped90,
                             6 => niri_ipc::Transform::Flipped180,

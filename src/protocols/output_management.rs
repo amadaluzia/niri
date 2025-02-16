@@ -666,9 +666,9 @@ where
             zwlr_output_configuration_head_v1::Request::SetTransform { transform } => {
                 let transform = match transform {
                     WEnum::Value(WlTransform::Normal) => Transform::Normal,
-                    WEnum::Value(WlTransform::_90) => Transform::_90,
-                    WEnum::Value(WlTransform::_180) => Transform::_180,
-                    WEnum::Value(WlTransform::_270) => Transform::_270,
+                    WEnum::Value(WlTransform::_90) => Transform::Normal90,
+                    WEnum::Value(WlTransform::_180) => Transform::Normal180,
+                    WEnum::Value(WlTransform::_270) => Transform::Normal270,
                     WEnum::Value(WlTransform::Flipped) => Transform::Flipped,
                     WEnum::Value(WlTransform::Flipped90) => Transform::Flipped90,
                     WEnum::Value(WlTransform::Flipped180) => Transform::Flipped180,

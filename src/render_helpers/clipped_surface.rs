@@ -55,8 +55,8 @@ impl<R: NiriRenderer> ClippedSurfaceRenderElement<R> {
         let transform = elem.transform();
         // HACK: ??? for some reason flipped ones are fine.
         let transform = match transform {
-            Transform::_90 => Transform::_270,
-            Transform::_270 => Transform::_90,
+            Transform::Normal90 => Transform::Normal270,
+            Transform::Normal270 => Transform::Normal90,
             x => x,
         };
         let transform_matrix = Mat3::from_translation(Vec2::new(0.5, 0.5))
